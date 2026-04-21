@@ -30,9 +30,9 @@ Criaturas brutais, guerreiros pesados, defesa alta, força bruta.
 
 ⚔️ Cavaleiro da Lua Sangrenta ✅
 
-🐉 Dragão das Cinzas Eternas ✅
+🐗 Fera do Pântano Esquecido ✅
 
-🐦‍ Corvo de três olhos ✅
+🐦‍ Vult, Corvo de três olhos ✅
 
 🐂 Minotauro do Labirinto de Ossos ✅
 
@@ -50,7 +50,7 @@ Criaturas brutais, guerreiros pesados, defesa alta, força bruta.
 
 🦁 Quimera dos Sete Pecados ✅
 
-🐗 Fera do Pântano Esquecido ✅
+🐉 Dragão das Cinzas Eternas ✅
 
 🦅 Harpia do Crepúsculo ✅
 
@@ -87,7 +87,7 @@ Magias, feitiços, armadilhas, conhecimento, enganação, invocações.
 
 🐉 Selo do Dragão Adormecido ✅
 
-🔑 Chave dos Portões Proibidos ✅
+🔑 Chave para os Portões Proibidos ✅
 
 👻 Alma do Ladrão Amaldiçoado ✅
 
@@ -107,9 +107,9 @@ Ladinos, assassinos, espíritos velozes, ataques críticos, furtividade, embosca
 
 🦇 Súcubo da Meia-Noite ✅
 
-🌑 Sombra Viva do Labirinto (mudar)
+🌑 Sorin O que caminha Entre as sombras ✅
 
-🦇 Gárgula do Campanário ✅
+🦇 Gárgula da Torre do Sino ✅
 
 👻 Espectro da Ponte Desabada ✅
 
@@ -131,7 +131,7 @@ Ladinos, assassinos, espíritos velozes, ataques críticos, furtividade, embosca
 
 💋 O Beijo da Donzela Esquecida ✅
 
-🌳 Druida do Carvalho Sussurrante (mudar)
+🌳 Elara a ultima raiz ✅
 
 🧝 Elfa da Floresta Venenosa ✅
 
