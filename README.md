@@ -5,28 +5,14 @@
 # Card prompt style
 
 ┌─────────────────────────────────┐
-│  ⚔️ CAVALHEIRO DA LUA SANGRIENTA ⚔️ │
-├─────────────────────────────────┤
+│  CHUVA DE PÉTALAS NEGRAS        │
+│  ┌─────────────────────────────┐│
+│  │      📜 TIPO: PAPEL         ││
+│  └─────────────────────────────┘│
 │                                 │
-│       [ARTE CONCEITUAL]         │
-│    (Descrição conforme acima)   │
-│                                 │
 ├─────────────────────────────────┤
-│  ★(Pedra)               │
-├─────────────────────────────────┤
-│  💀 ATAQUE: 2.500               │
-│  🛡️ DEFESA: 1.800               │
-├─────────────────────────────────┤
-│  ✨ HABILIDADE: Juramento da Lua │
-│  Sangrenta - Ao ser invocado,   │
-│  você pode sacrificar 500 de    │
-│  vida para destruir uma         │
-│  criatura adversária com defesa │
-│  inferior a 2.000.              │
-├─────────────────────────────────┤
-│  "Ele jurou pela lua. A lua     │
-│   cobrou seu preço."            │
-│              ── Lenda de Verenthorn│
+│  "As pétalas caem. A beleza     │
+│   mata. E a escuridão floresce."│
 └─────────────────────────────────┘
 
 # Regras
@@ -42,76 +28,77 @@
 # ★ PEDRA (17 cartas)
 Criaturas brutais, guerreiros pesados, defesa alta, força bruta.
 
-⚔️ Cavaleiro da Lua Sangrenta
+⚔️ Cavaleiro da Lua Sangrenta ✅
 
-🐉 Dragão das Cinzas Eternas
+🐉 Dragão das Cinzas Eternas ✅
 
-🗿 Guardião do Túmulo Vazio
+🐦‍ Corvo de três olhos ✅
 
-🐂 Minotauro do Labirinto de Ossos
+🐂 Minotauro do Labirinto de Ossos ✅
 
-🐺 Lobo Fantasma da Colina
+🐺 Lobo Fantasma da Colina ✅
 
-🐛 Verme dos Abismo
+🐛 Verme dos Abismo ✅
 
-🛡️ Paladino da Aurora Cinzenta
+🛡️ Paladino da Aurora Cinzenta ✅
 
-👊 Monge do Punho Fantasma
+👊 Monge do Punho Fantasma ✅
 
-🗡️ Cavaleiro Esqueleto sem Nome
+🗡️ Cavaleiro Esqueleto sem Nome ✅
 
-🐎 Cavalo Negro do Apocalipse
+🐎 Cavalo Negro do Apocalipse ✅
 
-🦁 Quimera dos Sete Pecados
+🦁 Quimera dos Sete Pecados ✅
 
-🐗 Fera do Pântano Esquecido
+🐗 Fera do Pântano Esquecido ✅
 
-🦅 Harpia do Crepúsculo (versão corpo a corpo)
+🦅 Harpia do Crepúsculo ✅
 
-🧟 A Noite dos Mortos-Vivos (evento de invasão)
+🧟 A Noite dos Mortos-Vivos ✅
 
-🏚️ O Labirinto sem Fim (armadilha de contenção)
+🏚️ O Labirinto sem Fim ✅
 
-🔥 A Fogueira dos Inocentes (evento de destruição em massa)
+🔥 A Fogueira dos Inocentes ✅
 
-🪨 Golem das Almas Perdidas
+🪨 Golem das Almas Perdidas ✅
 
 # 📜 PAPEL (17 cartas)
 Magias, feitiços, armadilhas, conhecimento, enganação, invocações.
 
-🧙‍♀️ Bruxa do Véu Negro
+🧙‍♀️ Bruxa do Véu Negro ✅
 
-📖 Lich do Grimório Proibido
+📖 Lich do Grimório Proibido ✅
 
-🔮 Maga do Círculo Prateado
+🔮 Maga do Círculo Prateado ✅
 
-🙏 Clérigo do Crucifixo Quebrado
+🙏 Clérigo do Crucifixo Quebrado ✅
 
-🧙‍♂️ Mago do Selo Proibido 
+🧙‍♂️ Mago do Selo Proibido ✅
 
-🧙 Aquele que vê o fim
+🧙 Aquele que vê o fim ✅
 
-🎵 Bardo das Canções Esquecidas
+🎵 Bardo das Canções Esquecidas ✅
 
-🌸 Chuva de Pétalas Negras
+🌸 Chuva de Pétalas Negras ✅
 
-🌫️ Névoa dos Espíritos Condenados
+🌫️ Névoa dos Espíritos Condenados ✅
 
-🗿 Despertar do Ídolo de Pedra
+🗿 Despertar do Ídolo de Pedra ✅
 
-🐉 Selo do Dragão Adormecido
+🐉 Selo do Dragão Adormecido ✅
 
-🔑 Chave dos Portões Proibidos
+🔑 Chave dos Portões Proibidos ✅
 
-👻 Alma do Ladrão Amaldiçoado
+👻 Alma do Ladrão Amaldiçoado ✅
 
-🔘 O Selo dos Sete Anéis
+🔘 O Selo dos Sete Anéis ✅
 
-🔮 A Profecia do Nono Círculo
+🔮 A Profecia do Nono Círculo ✅
 
-👁️ O Pacto com a Entidade do Espelho
+👁️ O Pacto com a Entidade do Espelho ✅
 
-🎭 A Armadilha do Espelho Quebrado (mudar)
+🃏 A ultima carta do baralho ✅
+
 
 # ✂️ TESOURA (16 cartas)
 Ladinos, assassinos, espíritos velozes, ataques críticos, furtividade, emboscadas.
