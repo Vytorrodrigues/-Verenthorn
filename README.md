@@ -103,37 +103,37 @@ Magias, feitiços, armadilhas, conhecimento, enganação, invocações.
 # ✂️ TESOURA (16 cartas)
 Ladinos, assassinos, espíritos velozes, ataques críticos, furtividade, emboscadas.
 
-🗡️ Espírito da Lâmina Quebrada
+🗡️ Espírito da Lâmina Quebrada ✅
 
-🦇 Súcubo da Meia-Noite
+🦇 Súcubo da Meia-Noite ✅
 
-🌑 Sombra Viva do Labirinto
+🌑 Sombra Viva do Labirinto (mudar)
 
-🦇 Gárgula do Campanário Esquecido
+🦇 Gárgula do Campanário ✅
 
-👻 Espectro da Ponte Desabada
+👻 Espectro da Ponte Desabada ✅
 
-🐟 Sereia das Águas Estagnadas
+🐟 Sereia das Águas Estagnadas ✅
 
-🐦‍⬛ Corvo do Presságio Negro
+🐦‍ Moven O omen(Presságio) silêncioso ✅
 
-👼 Anjo da Estátua Chorosa
+👼 Anjo da Estátua Chorosa ✅
 
-🥷 Ladino das Sombras Dançantes
+🥷 Ladino das Sombras Dançantes ✅
 
-🏹 Caçador da Marca Escarlate
+🏹 Caçador da Marca Escarlate ✅
 
-🔇 Eco do Último Grito
+🔇 Eco do Último Grito ✅
 
-💀 A Maldição do Sangue Derramado
+💀 A Maldição do Sangue Derramado  ✅
 
-🌲 A Emboscada na Estrada da Neblina
+🌲 A Emboscada na Estrada da Neblina ✅
 
-💋 O Beijo da Donzela Esquecida
+💋 O Beijo da Donzela Esquecida ✅
 
-🌳 Druida do Carvalho Sussurrante (versão ágil)
+🌳 Druida do Carvalho Sussurrante (mudar)
 
-🧝 Elfa da Floresta Venenosa (original da lista anterior)
+🧝 Elfa da Floresta Venenosa ✅
 
 # prompt
 🎨 Técnica: Pintura digital simulando aquarela e guache (estilo anos 90)
