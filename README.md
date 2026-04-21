@@ -87,9 +87,9 @@ Magias, feitiços, armadilhas, conhecimento, enganação, invocações.
 
 🙏 Clérigo do Crucifixo Quebrado
 
-🧙‍♂️ Feiticeiro do Selo Proibido
+🧙‍♂️ Mago do Selo Proibido 
 
-🧙 Mago dos Círculos Proibidos
+🧙 Aquele que vê o fim
 
 🎵 Bardo das Canções Esquecidas
 
@@ -111,7 +111,7 @@ Magias, feitiços, armadilhas, conhecimento, enganação, invocações.
 
 👁️ O Pacto com a Entidade do Espelho
 
-🎭 A Armadilha do Espelho Quebrado
+🎭 A Armadilha do Espelho Quebrado (mudar)
 
 # ✂️ TESOURA (16 cartas)
 Ladinos, assassinos, espíritos velozes, ataques críticos, furtividade, emboscadas.
@@ -163,7 +163,7 @@ Ladinos, assassinos, espíritos velozes, ataques críticos, furtividade, embosca
 
 🎨 Proporção: Vertical 2:3 (padrão de cartas) 
 
-Fantasy dark art 1990s style, Magic The Gathering card art, painted in watercolor and gouache, dramatic chiaroscuro lighting, muted earthy palette with blood red and ghost blue accents. Vertical 2:3 card format, worn edges, textured paper feel. --ar 2:3 📏 Enquadramento: Plano aberto, atmosférico
+ 📏 Enquadramento: Plano aberto, atmosférico
 👤 Personagem: Nenhum personagem principal, apenas a magia em ação. Pétalas de rosas negras caem do céu como chuva, cobrindo o chão. No centro da imagem, uma silhueta humana está ajoelhada, cercada pelas pétalas.
 🌙 Fundo: Céu escuro e nublado, árvores sem folhas, solo coberto de pétalas negras.
 🎨 Cores: Preto, vermelho muito escuro, cinza, toques de branco.
