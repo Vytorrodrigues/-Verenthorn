@@ -1,22 +1,5 @@
-const deckOopente = document.getElementById("deckO");
-const deckJogadorc = document.getElementById("deckJ");
-
-const zonaCentral = document.getElementById("centralZ");
-
-const cemiterioOponente = document.getElementById("cemiO");
-const cemiterioJogador = document.getElementById("cemiJ");
-
-const battles = document.getElementById("battles");
-const wins = document.getElementById("wins");
-const defeat = document.getElementById("defeats");
-
-const cardCPU1 = document.getElementById("cardCPU1");
-const cardCPU2 = document.getElementById("cardCPU2");
-const cardCPU3 = document.getElementById("cardCPU3");
-
-const cardPlayer1 = document.getElementById("cardPlayer1");
-const cardPlayer2 = document.getElementById("cardPlayer2");
-const cardPlayer3 = document.getElementById("cardPlayer3");
+const campPlayer = document.getElementById("campPlayer");
+const card = document.getElementById("card");
 
 
 class JokenpoGame{
@@ -53,7 +36,7 @@ class JokenpoGame{
     //criar elemento html metodo
     createCard(card){
         return `
-            <div class="card">
+            <div id="card">
                 <!--<img src="${card.image}" alt="${card.name}" class="cardImage"> --!>
                  <div class="card-info">
                      <h2>${card.name}</h2>
@@ -74,10 +57,7 @@ class JokenpoGame{
         const playerHand = sortCard.slice(0, 3);
         const cpuHand = sortCard.slice(3, 6);
 
-        const result = this.battle(playerHand, cpuHand);
-
-        const campPlayer = document.getElementById("campPlayer");
-        const card = document.querySelector(".card");
+        // const result = this.battle(playerHand, cpuHand);
         
         if ( campPlayer) {
             campPlayer.innerHTML = playerHand.map((card) => this.createCard(card)).join("");
@@ -85,13 +65,15 @@ class JokenpoGame{
             alert("Carta não encontrado");
         };
 
-        const info = document.getElementById('gameInfo');
-        info.innerHTML = `
-            <h2>Ganhador da Rodada: ${result.winner}</h2>
-            <p>Placar: ${result.playerPoints} vs ${result.cpuPoints}</p>
-        `;
+
+
+        // const info = document.getElementById('gameInfo');
+        // info.innerHTML = `
+        //     <h2>Ganhador da Rodada: ${result.winner}</h2>
+        //     <p>Placar: ${result.playerPoints} vs ${result.cpuPoints}</p>
+        // `;
         
-        console.log("Detalhes da Batalha:", result.logs);
+        // console.log("Detalhes da Batalha:", result.logs);
     };
 
 
