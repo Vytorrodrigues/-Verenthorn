@@ -1,12 +1,14 @@
 const campPlayer = document.getElementById("campPlayer");
-const card = document.getElementById("card");
-
+const cardS = document.getElementById(".card");
 
 class JokenpoGame{
     //definindo atributos
     constructor(jsonURL){
         this.jsonURL = jsonURL;
         this.allCards = [];
+        this.playerHand = [];
+        this.cpuHand = [];
+        this.roundsPlayed = [];
         this.rules = {
             pedra: "tesoura",
             tesoura: "papel",
@@ -34,9 +36,9 @@ class JokenpoGame{
     };
 
     //criar elemento html metodo
-    createCard(card){
+    createCard(card, index, isPlayer = true){
         return `
-            <div id="card">
+           <div class="card" ${isPlayer ? `onclick="game.selectCard(${index})"` : ""} id="${isPlayer ? 'p-' : 'c-'}${index}">
                 <!--<img src="${card.image}" alt="${card.name}" class="cardImage"> --!>
                  <div class="card-info">
                      <h2>${card.name}</h2>
@@ -65,7 +67,11 @@ class JokenpoGame{
             alert("Carta não encontrado");
         };
 
-
+        // 2. Selecionamos todos os cards que acabamos de criar e adicionamos o evento aqui
+        // const cardElements = campPlayer.querySelectorAll('.card');
+        // cardElements.forEach((el, index) => {
+        //     el.addEventListener('click', () => this.selectCard(index));
+        // });
 
         // const info = document.getElementById('gameInfo');
         // info.innerHTML = `
@@ -76,47 +82,75 @@ class JokenpoGame{
         // console.log("Detalhes da Batalha:", result.logs);
     };
 
+    selectCard(index) {
+    if (this.roundsPlayed >= 3) return alert("A rodada acabou!");
 
-    battle(playerHand, cpuHand){
-        let playerPoints = 0;
-        let cpuPoints = 0;
-        const logs = [];
+    const pCard = this.playerHand[index];
+    const cCard = this.cpuHand[index];
 
-        for(let i = 0; i < 3; i++){
-            const pCard = playerHand[i];
-            const cCard = cpuHand[i];
+    // Destacar as cartas no HTML (opcional, para feedback visual)
+    document.getElementById(`p-${index}`).classList.add('selected');
+    document.getElementById(`c-${index}`).style.display = "block"; // Mostrar carta da CPU
 
-            const pType = pCard.type.toLowerCase();
-            const cType = cCard.type.toLowerCase();
+    // Executar a batalha apenas deste par
+    const roundResult = this.compare(pCard, cCard);
+    console.log(`Round ${this.roundsPlayed + 1}: ${roundResult}`);
 
-            let resultMessage = "";
+    this.roundsPlayed++;
 
-            if (pType === cType){
-                resultMessage = "Empate";
-            } else if( this.rules[pType] === cType){
-                playerPoints++;
-                resultMessage = "Jogador Ganhou";
-            }else{
-                cpuPoints++;
-                resultMessage = "Vitória da CPU";
-            };
-
-            logs.push({
-                round: i + 1,
-                pCard: pCard.name,
-                cCard: cCard.name,
-                result: resultMessage
-            });
-
-            return {
-                playerPoints,
-                cpuPoints,
-                winner: playerPoints > cpuPoints? "Jogador" : cpuPoints > playerPoints ? "CPU" : "Empate",
-                logs
-            };
-        }
+    if (this.roundsPlayed === 3) {
+        this.finishGame(); // Método para mostrar quem ganhou o ponto final
     }
 }
 
-const game = new JokenpoGame(`./cards.json`);
-game.play();
+// Método auxiliar apenas para comparar tipos
+compare(pCard, cCard) {
+    const pType = pCard.type.toLowerCase();
+    const cType = cCard.type.toLowerCase();
+    if (pType === cType) return "Empate";
+    return this.rules[pType] === cType ? "Ganhou" : "Perdeu";
+}
+
+    // battle(playerHand, cpuHand){
+    //     let playerPoints = 0;
+    //     let cpuPoints = 0;
+    //     const logs = [];
+
+    //     for(let i = 0; i < 3; i++){
+    //         const pCard = playerHand[i];
+    //         const cCard = cpuHand[i];
+
+    //         const pType = pCard.type.toLowerCase();
+    //         const cType = cCard.type.toLowerCase();
+
+    //         let resultMessage = "";
+
+    //         if (pType === cType){
+    //             resultMessage = "Empate";
+    //         } else if( this.rules[pType] === cType){
+    //             playerPoints++;
+    //             resultMessage = "Jogador Ganhou";
+    //         }else{
+    //             cpuPoints++;
+    //             resultMessage = "Vitória da CPU";
+    //         };
+
+    //         logs.push({
+    //             round: i + 1,
+    //             pCard: pCard.name,
+    //             cCard: cCard.name,
+    //             result: resultMessage
+    //         });
+
+    //     };
+
+    //     return {
+    //         playerPoints,
+    //         cpuPoints,
+    //         winner: playerPoints > cpuPoints? "Jogador" : cpuPoints > playerPoints ? "CPU" : "Empate",
+    //         logs
+    //     };
+    // };
+};
+window.game = new JokenpoGame(`./cards.json`);
+window.game.play();
