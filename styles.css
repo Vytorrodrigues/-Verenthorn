@@ -12,7 +12,7 @@
 }
 
 main {
-    font-family: "Jim Nightshade", cursive;
+    font-family: "Oswald", sans-serif;
     /* background-color: #1a1a2e; */
     background-image: url("./assets/camp_Battle/cript.jpeg");
     background-size: cover;
@@ -27,12 +27,13 @@ main {
 }
 
 header{
-    font-size: 30px;
+    font-size: 15px;
 
     & .contact{
         display: flex;
         justify-content: center;
         align-items: center;
+        gap: 10px;
     }
 }
 h1 {
@@ -108,13 +109,15 @@ h1 {
     color: #00d2ff;
     display: none;
 } */
+
 .id-tag { 
     font-size: 1rem;
     color: var(--bord-card);
     align-self:center;
 }
 
-.cpu-card { 
+.cpu-card {
+    text-align: center;
     cursor: default; 
 }
 .cpu-card:hover {
@@ -122,16 +125,20 @@ h1 {
 }
 
 #gameInfo {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     align-self: center;
-    width: 400px;
+    width: 200px;
     text-align: center;
+    font-size: 16px;
     color: var(--bord-card);
+    background-color: var(--bg--main);
+    border-radius: 0.6rem;
+    border: var(--bord-camp);
     /* background: #e94560; */
     padding: 10px;
     border-radius: 5px;
     font-weight: bold;
 }
+
 
 .section-label {
     font-size: 20px;
@@ -140,4 +147,14 @@ h1 {
     text-transform: uppercase;
     letter-spacing: 2px;
     color: var(--text-color);
+}
+
+.backCard{
+    width: 200px;
+    height: 300px;
+    border-radius: 0.9rem;
+    background-image: url(./assets/back_Ofcards.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }

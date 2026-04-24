@@ -38,16 +38,6 @@ class JokenpoGame {
         };
     };
 
-    getRandomCards() {
-        // return this.allCards[Math.floor(Math.random() * this.allCards.length)];
-
-        let sorT = 0; 
-        while(sorT < 3){
-            this.allCards[Math.floor(Math.random() * this.allCards.length)];
-        };
-
-    };
-
     createCardHTML(card, index, isPlayer = true) {
         return `
             <div class="card ${!isPlayer ? 'cpu-card' : ''}" 
@@ -64,10 +54,26 @@ class JokenpoGame {
         `;
     };
 
+    getRandomCards() {
+        const arrRandCard = [];
+
+        for(let i = 0; i < 6;i ++){
+            const randomC = this.allCards[Math.floor(Math.random() * this.allCards.length)];
+            arrRandCard.push(randomC);
+        }
+
+        return arrRandCard;
+    };
+
     async play() {
         if (this.allCards.length === 0) {
             await this.loadCards();
-        }
+            const backCards = document.querySelector(".backCard");
+            campCpu.appendChild(backCards);
+            backCards.style.display = "inline";
+        };
+
+        
 
         this.roundsPlayed = 0;
         this.playerScore = 0;
@@ -75,14 +81,13 @@ class JokenpoGame {
         infoDisplay.innerText = "Escolha uma carta!";
 
         const drawnCards = this.getRandomCards();
-
         this.playerHand = drawnCards
-        console.log(drawnCards);
 
-        // this.cpuHand = drawnCards.slice(0, 3);
+        this.playerHand = drawnCards.slice(0, 3);
+        this.cpuHand = drawnCards.slice(3, 6);
 
-        // campPlayer.innerHTML = this.playerHand.find((card, i) => this.createCardHTML(card, i, true)).join("");
-        // campCpu.innerHTML = this.cpuHand.map((card, i) => this.createCardHTML(card, i, false)).join("");
+        campPlayer.innerHTML = this.playerHand.map((card, i) => this.createCardHTML(card, i, true)).join("");
+        campCpu.innerHTML = this.cpuHand.map((card, i) => this.createCardHTML(card, i, false)).join("");
     };
 
     selectCard(index) {
@@ -98,6 +103,13 @@ class JokenpoGame {
         // Revelar carta da CPU e marcar jogador
         playerCardEl.classList.add('selected');
         const cpuCardEl = document.getElementById(`c-${index}`);
+
+        // if (cpuCardEl.visibility != "hidden") {
+        //     console.log(true);
+        // }else{
+        //     console.log(false)
+        // }
+
         cpuCardEl.style.visibility = "visible";
 
         // Lógica de Comparação
@@ -113,7 +125,13 @@ class JokenpoGame {
             this.playerScore == 0;
         };
 
-        infoDisplay.innerText = `Rodada ${this.roundsPlayed}: Você ${result}! \n (Placar: \n Player - ${this.playerScore} VS  CPU - ${this.cpuScore})`;
+        infoDisplay.innerHTML = `
+        <div>Rodada ${this.roundsPlayed}: ${result}! 
+            <p>Placar:</p> 
+            <p style= "color: #4CB944;"> Player - ${this.playerScore} </p>
+                VS  
+            <p style= "color: #FF2020;"> CPU - ${this.cpuScore} </p>
+         </div>`;
 
         if (this.roundsPlayed === 3) {
             setTimeout(() => this.finishGame(), 800);
@@ -125,7 +143,7 @@ class JokenpoGame {
         const cType = cCard.type.toLowerCase();
 
         if (pType === cType) {
-            return "Empatou";
+            return "Empate";
         };
         return this.rules[pType] === cType ? "Ganhou" : "Perdeu";
     };
