@@ -1,111 +1,143 @@
-/* * {
+*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body {
-    overflow: hidden; 
+:root{
+    --bg--main: #1A1625;
+    --bord-card: #B3342D;
+    --bord-camp: #2C2C2E;
+    --text-color: #948BB3;
 }
 
 main {
-    background-color: #341b44;
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-}
-
-#register {
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.7); 
-    border-right: 1px solid rgba(255, 255, 255, 0.2); 
-    padding: 20px;
-    width: 250px;
-    flex-shrink: 0;
-    height: 100%;
-    color: #fff;
-    font-family: 'Oswald', sans-serif;
-    z-index: 10;
-}
-
-#register .layoutHistory {
-    display: flex;
-    justify-content: center;
-    flex-flow: column;
-    gap: 1.3rem;
-    margin-top: 2rem;
-}
-
-#wins { color: green; }
-#defeat { color: rgb(173, 10, 10); }
-
-#campBattle {
-    flex-grow: 1;
-    position: relative; 
-    height: 100%;
-    background-image: url("./assets/camp_Battle/camp.jpg");
+    font-family: "Jim Nightshade", cursive;
+    /* background-color: #1a1a2e; */
+    background-image: url("./assets/camp_Battle/cript.jpeg");
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover; 
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
 }
 
-.set {
-    position: absolute;
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.767); 
-    padding: 10px;
-    border-radius: 8px;
+header{
+    font-size: 30px;
+
+    & .contact{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+h1 {
+    font-size: 40px;
     text-align: center;
-    text-decoration: none;
-    align-content: center;
-    width: 127px; 
-    height: 180px;
+    color: var(--text-color); 
 }
 
-#campPlayer{
-    position: relative;
-    top: 40%;
+.game-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    width: 90%;
+    max-width: 1000px;
+}
+
+.board {
     display: flex;
     justify-content: center;
-    align-items: center;
+    gap: 15px;
+    min-height: 180px;
+    padding: 15px;
+    background: var(--bg--main);
+    border-radius: 10px;
+    border: 2px solid var(--bord-camp);
 }
 
-#deckO{ top: 1%; left: %; }
-#cemiJ { bottom: 5%; left: 0.3%; }
+.card {
+    cursor: pointer;
+    transition: transform 0.3s, border-color 0.3s;
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
 
-#centralZ {
-    width: 250px;
-    top: 48%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
+    & .cardImage{
+    width: 200;
+    height: 300;
+    }
 }
 
-#pileCards{
-    border-radius: 0.6rem;
-    width: 140px;
-    height: 180px;
-}
-
-#cemiO { top: -114%; right: -173%; }
-#deckJ { bottom: -113%; right: -165%; }
-
-.cardImage{
-    width: 300px;
-    height: 350px;
-    border-radius: 0.6rem;
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.767);
-}
-.card{
-    margin: 0.4rem;
-    transition: transform 0.3s ease;
+.card:hover {
+    transform: translateY(-10px);
+    border-color: var(--bord-card);
     border-radius: 0.8rem;
 }
 
-.card:hover{
-    transform: scale(1.1);
-    cursor: pointer;
+.card.selected {
+    border-radius: 0.8rem;
+    border-color: var(--bord-camp);
+    background: #1a1a2e;
+    pointer-events: none;
+    transform: scale(0.95);
+    opacity: 0.8;
 }
 
-.card-info{
+.cardImage{
+    border-radius: 0.7rem;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.773);
+    width: 230px;
+    height: 300px;
+}
+
+/*VERIFICAÇÃO DE DADOS DAS CARTAS*/
+/* .card-info h2 {
+    font-size: 1.1rem;
+    margin: 0;
+} */
+/* .card-info p {
+    font-size: 0.9rem;
+    color: #00d2ff;
     display: none;
 } */
+.id-tag { 
+    font-size: 1rem;
+    color: var(--bord-card);
+    align-self:center;
+}
+
+.cpu-card { 
+    cursor: default; 
+}
+.cpu-card:hover {
+    transform: none;
+}
+
+#gameInfo {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    align-self: center;
+    width: 400px;
+    text-align: center;
+    color: var(--bord-card);
+    /* background: #e94560; */
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.section-label {
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-color);
+}

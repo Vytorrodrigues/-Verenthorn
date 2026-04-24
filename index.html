@@ -3,25 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css" type="text/css"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-    <title>Verenthorn-JokenPo</title>
-
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Jim+Nightshade&family=Oswald:wght@200..700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <title>Jokenpo Cards Game</title>
 </head>
 <body>
     <main>
-        <section id="campBattle">
-            <div id="gameInfo">
+        <header>
+            <p> Copyright© 2026 Lista de pedidos - Vytorrodrigues. Todos os direitos reservados</p>
+            <section class="contact">
+                    <a href="https://github.com/Vytorrodrigues" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/vytor-rodrigues-390257356/" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+            </section>
+        </header>
+        <h1>VerenThorn-Jo Ken Po</h1>
+        <div class="game-container">
+            <div>
+                <p class="section-label">Campo da CPU</p>
+                <div id="campCpu" class="board"></div>
             </div>
-                <div id="campCPU">
-                </div>      
-                    
-                <div id="campPlayer">
-                </div>
-        </section>
+                <h2 id="gameInfo">Escolha uma carta para batalhar!</h2>
+            <div>
+                <p class="section-label">Seu Campo</p>
+                <div id="campPlayer" class="board"></div>
+            </div>
+        </div>
     </main>
-    <script type="module" src="./main.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
