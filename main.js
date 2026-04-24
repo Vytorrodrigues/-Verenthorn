@@ -38,9 +38,15 @@ class JokenpoGame {
         };
     };
 
-    getRandomCards(amount) {
-        return [...this.allCards].sort(() => Math.random() - 0.5).slice(0, amount);
-    }
+    getRandomCards() {
+        // return this.allCards[Math.floor(Math.random() * this.allCards.length)];
+
+        let sorT = 0; 
+        while(sorT < 3){
+            this.allCards[Math.floor(Math.random() * this.allCards.length)];
+        };
+
+    };
 
     createCardHTML(card, index, isPlayer = true) {
         return `
@@ -68,13 +74,15 @@ class JokenpoGame {
         this.cpuScore = 0;
         infoDisplay.innerText = "Escolha uma carta!";
 
-        const drawnCards = this.getRandomCards(6);
+        const drawnCards = this.getRandomCards();
 
-        this.playerHand = drawnCards.slice(0, 3);
-        this.cpuHand = drawnCards.slice(3, 6);
+        this.playerHand = drawnCards
+        console.log(drawnCards);
 
-        campPlayer.innerHTML = this.playerHand.map((card, i) => this.createCardHTML(card, i, true)).join("");
-        campCpu.innerHTML = this.cpuHand.map((card, i) => this.createCardHTML(card, i, false)).join("");
+        // this.cpuHand = drawnCards.slice(0, 3);
+
+        // campPlayer.innerHTML = this.playerHand.find((card, i) => this.createCardHTML(card, i, true)).join("");
+        // campCpu.innerHTML = this.cpuHand.map((card, i) => this.createCardHTML(card, i, false)).join("");
     };
 
     selectCard(index) {
@@ -96,19 +104,20 @@ class JokenpoGame {
         const result = this.compare(pCard, cCard);
         this.roundsPlayed++;
 
-        // if (result === "Ganhou") {
-        //     this.playerScore++;
-        // }else if (result === "Perdeu") {
-        //     this.cpuScore++;
-        // };
+        if (result === "Ganhou") {
+            this.playerScore++;
+        }else if (result === "Perdeu") {
+            this.cpuScore++;
+        }else{
+            this.cpuScore == 0;
+            this.playerScore == 0;
+        };
 
-        result === "Ganhou" ? this.playerScore++ : result === "Perdeu" + this.cpuScore++;
-
-        infoDisplay.innerText = `Rodada ${this.roundsPlayed}: Você ${result}! \n (Placar: ${this.playerScore}x${this.cpuScore})`;
+        infoDisplay.innerText = `Rodada ${this.roundsPlayed}: Você ${result}! \n (Placar: \n Player - ${this.playerScore} VS  CPU - ${this.cpuScore})`;
 
         if (this.roundsPlayed === 3) {
             setTimeout(() => this.finishGame(), 800);
-        };
+        }; 
     };
 
     compare(pCard, cCard) {

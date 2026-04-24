@@ -20,7 +20,7 @@
     { "id": 18, "name": "A Fogueira dos Inocentes", "type": "pedra" , "image" : "./assets/pedra/Fogueira_dos_inocentes.jpeg" },
     { "id": 19, "name": "Golem das Almas Perdidas", "type": "pedra" , "image" : "./assets/pedra/Golem_das_Almas.jpeg" },
     { "id": 20, "name": "Thalion, o Último Abraço", "type": "pedra","image" : "./assets/pedra/Thalion,_O_Últimobraço.jpeg" },
-    { "id": 21, "name": "Vorath, O Esmagador de Nomes", "type": "pedra", "image" : "./assets/pedra/Vorath_esmagadorDenomes.jpeg" },
+    { "id": 21, "name": "Vorath, O Esmagador de Nomes", "type": "pedra", "image" : "./assets/pedra/Vorath_esmagadorDeNomes.jpeg" },
     { "id": 22, "name": "Bruxa do Véu Negro", "type": "papel" , "image" : "./assets/papel/bruxa_veuNegro.jpeg" },
     { "id": 23, "name": "Deysi, a Memória das Flores", "type": "papel", "image" : "./assets/papel/Deysi_aMemoriadasFlores.jpeg" },
     { "id": 24, "name": "Lich do Grimório Proibido", "type": "papel" , "image" : "./assets/papel/lich_Libro.jpeg" },
