@@ -1,6 +1,10 @@
 const campPlayer = document.getElementById("campPlayer");
 const campCpu = document.getElementById("campCpu");
 const infoDisplay = document.getElementById("gameInfo");
+const backCard1 = document.querySelector(".backCard1");
+const backCard2 = document.querySelector(".backCard2");
+const backCard3 = document.querySelector(".backCard3");
+
 
 class JokenpoGame {
     constructor(jsonURL) {
@@ -43,7 +47,7 @@ class JokenpoGame {
             <div class="card ${!isPlayer ? 'cpu-card' : ''}" 
                     ${isPlayer ? `onclick="game.selectCard(${index})"` : ""} 
                     id="${isPlayer ? 'p-' : 'c-'}${index}"
-                    style="${!isPlayer ? 'visibility: hidden;' : ''}">
+                    style="${!isPlayer ? 'display: none;' : ''}">
                 <div class="card-info">
                     <img class="cardImage" src="${card.image}" alt="${card.name}"/>
                     <!--<h2>${card.name}</h2>
@@ -68,26 +72,27 @@ class JokenpoGame {
     async play() {
         if (this.allCards.length === 0) {
             await this.loadCards();
-            const backCards = document.querySelector(".backCard");
-            campCpu.appendChild(backCards);
-            backCards.style.display = "inline";
         };
-
         
-
         this.roundsPlayed = 0;
         this.playerScore = 0;
         this.cpuScore = 0;
         infoDisplay.innerText = "Escolha uma carta!";
 
+        
         const drawnCards = this.getRandomCards();
         this.playerHand = drawnCards
-
+        
         this.playerHand = drawnCards.slice(0, 3);
         this.cpuHand = drawnCards.slice(3, 6);
-
+        
         campPlayer.innerHTML = this.playerHand.map((card, i) => this.createCardHTML(card, i, true)).join("");
         campCpu.innerHTML = this.cpuHand.map((card, i) => this.createCardHTML(card, i, false)).join("");
+
+        campCpu.append(backCard1);
+        campCpu.append(backCard2);
+        campCpu.append(backCard3);
+
     };
 
     selectCard(index) {
@@ -104,13 +109,12 @@ class JokenpoGame {
         playerCardEl.classList.add('selected');
         const cpuCardEl = document.getElementById(`c-${index}`);
 
-        // if (cpuCardEl.visibility != "hidden") {
-        //     console.log(true);
-        // }else{
-        //     console.log(false)
-        // }
+        if (cpuCardEl.style.display != "block") {
+            cpuCardEl.style.display = "block";
+            backCard2.style.display = "none";  
+        };
 
-        cpuCardEl.style.visibility = "visible";
+        cpuCardEl.style.display = "block";
 
         // Lógica de Comparação
         const result = this.compare(pCard, cCard);

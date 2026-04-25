@@ -9,6 +9,7 @@
     --bord-card: #B3342D;
     --bord-camp: #2C2C2E;
     --text-color: #948BB3;
+    --shadow-color:#000000c5;
 }
 
 main {
@@ -24,6 +25,10 @@ main {
     align-items: center;
     min-height: 100vh;
     margin: 0;
+}
+
+#collection{
+    color: #ffffffae;
 }
 
 header{
@@ -149,10 +154,12 @@ h1 {
     color: var(--text-color);
 }
 
-.backCard{
+.backCard1, .backCard2, .backCard3{
+    border: var(--bord-camp);
     width: 200px;
     height: 300px;
     border-radius: 0.9rem;
+    box-shadow: 6px 6px 10px var(--shadow-color);
     background-image: url(./assets/back_Ofcards.jpeg);
     background-position: center;
     background-size: cover;
