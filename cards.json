@@ -59,6 +59,8 @@
     { "id": 57, "name": "Sera, a Primeira Luz", "type": "tesoura" , "image" : "./assets/tesoura/Seera_AprimeiraLuz.jpeg" },
     { "id": 58, "name": "Morgus, o Silêncio que corta", "type": "tesoura" , "image" : "./assets/tesoura/Morgus_O_Silêncio_SilencioqueCorta.jpeg" },
     { "id": 59, "name": "Malzar, o que riu primeiro", "type": "tesoura" , "image" : "./assets/tesoura/Malzar_OqueRi.jpeg" },
-    { "id": 60, "name": "Mirella, a Tecelã da Alvoradas", "type": "papel" , "image" : "./assets/papel/Mirella_aTecelãDeAlvoradas.jpeg" }
+    { "id": 60, "name": "Mirella, a Tecelã da Alvoradas", "type": "papel" , "image" : "./assets/papel/Mirella_aTecelãDeAlvoradas.jpeg" },
+     { "id": 61, "name": "Yosef, o Herói", "type": "papel" , "image" : "./assets/papel/Yosef, o heroi.jpeg" },
+     { "id": 62, "name": "Jé, o Guia", "type": "papel" , "image" : "./assets/papel/Jé_oGuia.jpeg" }
   ]
 }

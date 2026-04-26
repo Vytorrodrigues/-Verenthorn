@@ -43,11 +43,9 @@ class JokenpoGame {
     };
 
     createCardHTML(card, index, isPlayer = true) {
-        return `
-            <div class="card ${!isPlayer ? 'cpu-card' : ''}" 
-                    ${isPlayer ? `onclick="game.selectCard(${index})"` : ""} 
-                    id="${isPlayer ? 'p-' : 'c-'}${index}"
-                    style="${!isPlayer ? 'display: none;' : ''}">
+        if (isPlayer){
+            return `
+            <div class="card" onclick="game.selectCard(${index})" id="$'p-'${index}">
                 <div class="card-info">
                     <img class="cardImage" src="${card.image}" alt="${card.name}"/>
                     <!--<h2>${card.name}</h2>
@@ -55,7 +53,21 @@ class JokenpoGame {
                 </div>
                 <span class="id-tag">#${card.id}</span>
             </div>
-        `;
+            `;
+        } else{
+            return `
+                <div class="cpu-card-wrapper" id="wrapper-c-${index}">
+                    <div class="backCard" id="back-c-${index}">
+                    </div>
+                        <div class="card cpu-card" id="c-${index}" style="display: none;">
+                        <div class="card-info">
+                        <img class="cardImage" src="${card.image}" alt="${card.name}"/>
+                        </div>
+                        <span class="id-tag">#${card.id}</span>
+                        </div>
+                </div>
+            `
+        }
     };
 
     getRandomCards() {
@@ -88,33 +100,24 @@ class JokenpoGame {
         
         campPlayer.innerHTML = this.playerHand.map((card, i) => this.createCardHTML(card, i, true)).join("");
         campCpu.innerHTML = this.cpuHand.map((card, i) => this.createCardHTML(card, i, false)).join("");
-
-        campCpu.append(backCard1);
-        campCpu.append(backCard2);
-        campCpu.append(backCard3);
-
     };
 
     selectCard(index) {
         if (this.roundsPlayed >= 3) return;
 
         const playerCardEl = document.getElementById(`p-${index}`);
-        if (playerCardEl.classList.contains('selected')) return;
 
         // Cartas escolhidas
         const pCard = this.playerHand[index];
         const cCard = this.cpuHand[index];
 
+        //Esconder cpu back card
+        const backEl = document.getElementById(`back-c-${index}`);
+        if (backEl) backEl.style.display = "none";
+
         // Revelar carta da CPU e marcar jogador
-        playerCardEl.classList.add('selected');
         const cpuCardEl = document.getElementById(`c-${index}`);
-
-        if (cpuCardEl.style.display != "block") {
-            cpuCardEl.style.display = "block";
-            backCard2.style.display = "none";  
-        };
-
-        cpuCardEl.style.display = "block";
+        if (cpuCardEl) cpuCardEl.style.display = "block";
 
         // Lógica de Comparação
         const result = this.compare(pCard, cCard);

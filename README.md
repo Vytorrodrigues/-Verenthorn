@@ -1,6 +1,14 @@
 # Verenthorn O ABISMO DOS SUSPIROS
 
-📖No mundo de Verenthorn, as forças do mal emergiram das sombras do abismo, corrompendo reinos inteiros com a Névoa Negra — uma entidade que consome esperança, memórias e a própria luz do sol. Liderados por Vorath o esmagador de nome, os exércitos sombrios marcharam sobre as cidades livres, espalhando medo e desolação por onde passavam. No coração da escuridão os servos do mal, como Malzar e Nyxia, sussurravam promessas enganosas, atraindo heróis frágeis para a perdição eterna. Em resposta, a Acrópolis de Verenthorn reuniu os últimos guardiões da luz: cavaleiros como Aldric, feiticeiras como Mirella e almas bondosas como Sera, que recusaram se curvar à tirania. Lutando com fragmentos de esperança, eles traçaram estratégias nos salões da catedral em ruínas e forjaram pactos com reinos neutros, como o tecnológico Mecanus. A guerra não era apenas por terra — era pela alma de cada criança que ainda sonhava com um amanhecer sem névoa. Embora as forças do mal fossem muitas, os defensores da justiça acreditavam que a luz nunca se apaga por completo enquanto um coração ainda bater. E assim, Verenthorn se tornou o último tabuleiro entre o fim dos tempos e a chance de um novo começo
+📖 No mundo de Verenthorn, as forças do mal emergiram das sombras do abismo, corrompendo reinos inteiros com a Névoa Negra — uma entidade que consome esperança, memórias e a própria luz do sol. Liderados por Vorath, o Esmagador de Nomes, os exércitos sombrios marcharam sobre as cidades livres, espalhando medo e desolação por onde passavam. No coração da escuridão, servos do mal como Malzar e Nyxia sussurravam promessas enganosas, atraindo heróis frágeis para a perdição eterna.
+
+Em resposta, a Acrópolis de Verenthorn reuniu os últimos guardiões da luz: cavaleiros como Aldric, feiticeiras como Mirella e almas bondosas como Sera, que recusaram se curvar à tirania. Lutando com fragmentos de esperança, eles traçaram estratégias nos salões da catedral em ruínas e forjaram pactos com reinos neutros, como o tecnológico Mecanus.
+
+Foi então que surgiu o mais improvável dos heróis: Yosef, um bebê recém-nascido envolto em uma aura dourada e sagrada. Dizem que sua luz fez a névoa negra recuar pela primeira vez em cem anos. Ao seu lado, Jé, o Guia — uma ovelha de lã macia como nuvem, com detalhes dourados e um olhar amoroso — caminhava silenciosamente, mostrando o caminho de volta à esperança onde antes só havia desolação.
+
+Juntos, Yosef e Jé se tornaram símbolos vivos de que a resistência pode vir das formas mais frágeis e inesperadas. A guerra não era apenas por terra — era pela alma de cada criança que ainda sonhava com um amanhecer sem névoa. Embora as forças do mal fossem muitas, os defensores da justiça acreditavam que a luz nunca se apaga por completo enquanto um coração ainda bater.
+
+E assim, Verenthorn se tornou o último tabuleiro entre o fim dos tempos e a chance de um novo começo.
 
 # ⚔️ Verenthorn: O Duelo de Cartas
 
@@ -19,14 +27,6 @@
 - Separação de Responsabilidades: O jogo divide claramente quem busca os dados (consumo de um JSON local via Fetch API), quem faz a matemática do sorteio e quem atualiza a interface (manipulação do DOM).
 
 - Escalabilidade: Graças a essa arquitetura, adicionar novos tipos de cartas ou alterar as regras de combate no futuro exigirá mudanças em apenas um lugar do código, sem quebrar o resto do jogo.
-
-# 🚧 Status do Projeto (Work in Progress)
-
-- Atualmente, Verenthorn é um projeto em desenvolvimento ativo.
-
-- Mecânicas: O ciclo base de sortear cartas e comparar os tipos já está sendo refinado, com melhorias visuais e de interação sendo implementadas passo a passo.
-
-- O Universo (Lore): A história por trás de Verenthorn, o mundo onde esses duelos acontecem e a origem de cada carta ainda estão sendo escritos. A visão para o futuro é que as cartas não sejam apenas "pedra ou papel", mas sim personagens e feitiços com seu próprio peso narrativo dentro da história do jogo.
 
 # Prompt art
 🎨 Técnica: Pintura digital simulando aquarela e guache (estilo anos 90)
@@ -49,17 +49,23 @@
 🎨 Cores: Preto, vermelho muito escuro, cinza, toques de branco.
 🖌️ Detalhe: Algumas pétalas estão em chamas, queimando com fogo negro.
 
-# Card prompt style
+## 🧩 Estrutura da Carta
 
-┌─────────────────────────────────┐
-│  CHUVA DE PÉTALAS NEGRAS        │
-│  ┌─────────────────────────────┐│
-│  │      📜 TIPO: PAPEL         ││
-│  └─────────────────────────────┘│
-│                                 │
-├─────────────────────────────────┤
-│  "As pétalas caem. A beleza     │
-│   mata. E a escuridão floresce."│
-└─────────────────────────────────┘
+| Campo | Descrição |
+|:---|:---|
+| **Nome** | Título da carta, no topo |
+| **Tipo** | Indica se é 🪨 Pedra, 📜 Papel ou ✂️ Tesoura |
+| **Arte Conceitual** | Ilustração central da carta |
+| **Atributos** | Ataque (⚔️) e Defesa (🛡️) |
+| **Habilidade** | Efeito especial da carta no jogo |
+| **Lore** | Frase temática sobre a história da carta |
 
-MAKE A CARD IN PORTUGUESE THE TYPE PAPER 📜 STAY BELLOW THE NAME
+## 📐 Tipos de Carta
+
+| Tipo | Símbolo | Foco Estratégico | Bônus |
+|:---|:---:|:---|:---|
+| **Pedra** | 🪨 | Força bruta, resistência |
+| **Papel** | 📜 | Magia, controle, estratégia | 
+| **Tesoura** | ✂️ | Velocidade, crítico, furtividade |
+
+# ESTÁ É UMA HOMENAGEM AO MEU FALECIDO FILHO, O GRANDE HERÓI!
