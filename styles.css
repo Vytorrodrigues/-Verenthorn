@@ -181,3 +181,35 @@ h1 {
     position: relative;
     display: inline-block;
 }
+
+@media (max-width: 768px) {
+    .cardImage, .backCard {
+        width: 100px;
+        height: 140px;
+    }
+
+    .game-container {
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .board {
+        gap: 8px;
+        padding: 10px;
+    }
+
+    #gameInfo {
+        width: 90%;
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .card:active {
+        transform: scale(1.1);
+        border-color: var(--bord-card);
+    }
+}
+

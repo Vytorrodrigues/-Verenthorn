@@ -72,3 +72,14 @@ header{
     color: var(--text-color);
     text-align: center;
 }
+
+@media (max-width: 768px) {
+    #allCards {
+        justify-content: space-around; 
+    }
+    
+    .card-info img {
+        width: 150px; 
+        height: auto;
+    }
+}
