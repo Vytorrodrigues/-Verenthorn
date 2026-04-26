@@ -12,13 +12,13 @@
     --shadow-color:#000000c5;
 }
 
-main{
+body{
     background-color: var(--bg--main);
 }
 
 header{
     text-align: center;
-    margin: 0 0 6px 0;
+    margin: 10px;
 
     & a{
         color: #ffffffc9;
@@ -30,6 +30,22 @@ header{
         font-size: 40px;
     }
 
+    
+}
+
+#gameSection{
+    text-decoration: none;
+    border-radius: 0.6rem;
+    margin: 10px;
+    box-shadow:6px 8px 10px var(--shadow-color);
+    padding: 0.4rem;
+    background-color: var(--bord-card);
+    color: #ffffffae;
+    transition: 0.5s ease;
+}
+
+#gameSection:hover{
+    transform:  translateY(10px) scale(1.2);
 }
 
 #allCards{

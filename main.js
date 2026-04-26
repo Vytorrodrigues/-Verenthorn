@@ -45,7 +45,7 @@ class JokenpoGame {
     createCardHTML(card, index, isPlayer = true) {
         if (isPlayer){
             return `
-            <div class="card" onclick="game.selectCard(${index})" id="$'p-'${index}">
+            <div class="card" onclick="game.selectCard(${index}, this)" id="$p-${index}">
                 <div class="card-info">
                     <img class="cardImage" src="${card.image}" alt="${card.name}"/>
                     <!--<h2>${card.name}</h2>
@@ -56,7 +56,7 @@ class JokenpoGame {
             `;
         } else{
             return `
-                <div class="cpu-card-wrapper" id="wrapper-c-${index}">
+                <div class="cpu-card-wrapper" id="-c-${index}">
                     <div class="backCard" id="back-c-${index}">
                     </div>
                         <div class="card cpu-card" id="c-${index}" style="display: none;">
@@ -67,7 +67,7 @@ class JokenpoGame {
                         </div>
                 </div>
             `
-        }
+        };
     };
 
     getRandomCards() {
@@ -98,18 +98,19 @@ class JokenpoGame {
         this.playerHand = drawnCards.slice(0, 3);
         this.cpuHand = drawnCards.slice(3, 6);
         
-        campPlayer.innerHTML = this.playerHand.map((card, i) => this.createCardHTML(card, i, true)).join("");
-        campCpu.innerHTML = this.cpuHand.map((card, i) => this.createCardHTML(card, i, false)).join("");
+        campPlayer.innerHTML = this.playerHand.map((card, index) => this.createCardHTML(card, index, true)).join("");
+        campCpu.innerHTML = this.cpuHand.map((card, index) => this.createCardHTML(card, index, false)).join("");
     };
 
-    selectCard(index) {
-        if (this.roundsPlayed >= 3) return;
+    selectCard(index, clickedElement) {
 
-        const playerCardEl = document.getElementById(`p-${index}`);
+        if (this.roundsPlayed >= 3) return;
+        
+        clickedElement.classList.add("selected")
 
         // Cartas escolhidas
         const pCard = this.playerHand[index];
-        const cCard = this.cpuHand[index];
+        const cCard = this.cpuHand[index]; 
 
         //Esconder cpu back card
         const backEl = document.getElementById(`back-c-${index}`);
@@ -146,8 +147,8 @@ class JokenpoGame {
     };
 
     compare(pCard, cCard) {
-        const pType = pCard.type.toLowerCase();
-        const cType = cCard.type.toLowerCase();
+        const pType = pCard.type.toLowerCase().trim();
+        const cType = cCard.type.toLowerCase().trim();
 
         if (pType === cType) {
             return "Empate";

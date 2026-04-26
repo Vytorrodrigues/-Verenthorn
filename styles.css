@@ -12,13 +12,15 @@
     --shadow-color:#000000c5;
 }
 
-main {
-    font-family: "Oswald", sans-serif;
-    /* background-color: #1a1a2e; */
-    background-image: url("./assets/camp_Battle/cript.jpeg");
+body{
+     background-image: url("./assets/camp_Battle/cript.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+main {
+    font-family: "Oswald", sans-serif;
     color: white;
     display: flex;
     flex-direction: column;
@@ -28,17 +30,37 @@ main {
 }
 
 #collection{
+    text-decoration: none;
+    border-radius: 0.6rem;
+    margin: 2px;
+    box-shadow:6px 8px 10px var(--shadow-color);
+    padding: 0.2rem;
+    background-color: var(--bord-card);
     color: #ffffffae;
+    transition: 0.5s ease;
+}
+
+#collection:hover{
+    transform: scale(1.2);
 }
 
 header{
     font-size: 15px;
+    margin: 3px;
 
     & .contact{
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 10px;
+
+        & i{
+            transition: 0.3s ease;
+        }
+
+        & i:hover{
+            transform: scale(1.5);
+        }
     }
 }
 h1 {
