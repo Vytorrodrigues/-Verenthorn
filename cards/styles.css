@@ -74,12 +74,8 @@ header{
 }
 
 @media (max-width: 768px) {
-    #allCards {
-        justify-content: space-around; 
-    }
-    
     .card-info img {
-        width: 150px; 
+        width: 170px; 
         height: auto;
     }
 }

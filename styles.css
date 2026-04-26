@@ -12,8 +12,12 @@
     --shadow-color:#000000c5;
 }
 
+html{
+    background-color: var(--bg--main);
+}
+
 body{
-     background-image: url("./assets/camp_Battle/cript.jpeg");
+    background-image: url("./assets/camp_Battle/cript.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
