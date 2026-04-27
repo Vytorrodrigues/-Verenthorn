@@ -47,11 +47,10 @@ class JokenpoGame {
             return `
             <div class="card" onclick="game.selectCard(${index}, this)" id="$p-${index}">
                 <div class="card-info">
+                    <p class="id-tag">#${card.id} Tipo: ${card.type}</p>
                     <img class="cardImage" src="${card.image}" alt="${card.name}"/>
-                    <!--<h2>${card.name}</h2>
-                    <p>Tipo: ${card.type}</p>--!>
+                    <!--<h2>${card.name}</h2> --!>
                 </div>
-                <span class="id-tag">#${card.id}</span>
             </div>
             `;
         } else{
@@ -62,8 +61,8 @@ class JokenpoGame {
                         <div class="card cpu-card" id="c-${index}" style="display: none;">
                         <div class="card-info">
                         <img class="cardImage" src="${card.image}" alt="${card.name}"/>
+                        <p class="id-tag">#${card.id} Tipo: ${card.type}</p>
                         </div>
-                        <span class="id-tag">#${card.id}</span>
                         </div>
                 </div>
             `
@@ -136,9 +135,9 @@ class JokenpoGame {
         infoDisplay.innerHTML = `
         <div>Rodada ${this.roundsPlayed}: ${result}! 
             <p>Placar:</p> 
-            <p style= "color: #4CB944;"> Player - ${this.playerScore} </p>
-                VS  
             <p style= "color: #FF2020;"> CPU - ${this.cpuScore} </p>
+            VS  
+            <p style= "color: #4CB944;"> Player - ${this.playerScore} </p>
          </div>`;
 
         if (this.roundsPlayed === 3) {
