@@ -34,9 +34,11 @@ header{
 }
 
 #gameSection{
+    display: inline-block;
+    width: 60px;
     text-decoration: none;
     border-radius: 0.6rem;
-    margin: 10px;
+    margin: 3px;
     box-shadow:6px 8px 10px var(--shadow-color);
     padding: 0.4rem;
     background-color: var(--bord-card);
@@ -45,7 +47,7 @@ header{
 }
 
 #gameSection:hover{
-    transform:  translateY(10px) scale(1.2);
+    transform:  translateY(5px) scale(1.1);
 }
 
 #allCards{
